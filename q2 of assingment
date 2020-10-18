@@ -1,0 +1,29 @@
+import random
+import math
+def randomvalue():
+    a = random.randint(0,99)
+    return a
+n = eval(input("Enter the how many random number you want: "))
+list1 = []
+for i in range(n):
+
+    tempvalue = randomvalue()
+    print(tempvalue)
+    if(tempvalue%3==0):
+        continue
+    list1.append(tempvalue)
+print("List is having:", list1)
+count = 0
+add = 0
+first=0
+for i in range(len(list1)):
+    left = list1[i]
+    while left>0:
+        first=left%10
+        left = left//10
+        count = count + 1
+    add=add+first
+print(add)
+print()
+    
+    
